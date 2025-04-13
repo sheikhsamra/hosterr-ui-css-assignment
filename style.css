@@ -15,16 +15,15 @@ body {
 /* Navigation */
 .nav-container {
     display: flex;
-    gap: 20px;
     padding: 20px;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
     align-items: center;
 }
 
 .left-nav {
     display: flex;
-    gap: 10px;
+    gap: 5px;
     align-items: center;
 }
 
@@ -211,13 +210,13 @@ body {
 .main-containt{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 150px;
-    
+    justify-content: space-evenly;
+    gap: 20px;
+    margin-top: 20px
 }
 .containt{
-    width: 400px;
-    flex-direction: column;
+    width: 500px;
+    min-width: 300px;
     flex-wrap: wrap;
 }
 .containt h1{
@@ -293,13 +292,20 @@ body {
     justify-content: space-between;
     align-items: center;
     align-content: center;
-    padding: 20px;
+    width: 85%;
+    margin: auto;
+    padding: 10px 0px;
+  }
+
+  .footer-section{
+    width: 300px;
+    flex-wrap: wrap;
   }
   
 .footer-section ul{
     list-style-type: none;
     display: flex;
-    gap: 50px;
+    gap: 20px;
     font-size: 16px;
     color: #555;
 }
@@ -321,7 +327,7 @@ body {
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    max-width: 300px;
+    min-width: 220px;
   }
   
   .footer-img img {
