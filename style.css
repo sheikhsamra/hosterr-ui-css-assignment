@@ -1,0 +1,345 @@
+body {
+    background-color: rgb(252, 221, 136);
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.main-container {
+    background-color: #f8f4e8;
+    margin: 100px;
+    border-radius: 30px;
+    padding: 20px;
+}
+
+/* Navigation */
+.nav-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.left-nav {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.left-nav img {
+    width: 50px;
+    height: 30px;
+}
+
+.logo {
+    position: relative;
+    font-weight: 800px;
+    font-size: 22px;
+    display: inline block;
+    transition: color 0.3s ease, transform 0.3s ease-in;
+    text-decoration: none;
+}
+.logo:hover{
+    color: orange;
+    transform: scaleX(1.1);
+}
+
+.logo::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: -2px;
+    background-color: orange;
+    transition: width 0.3s ease-in-out;
+}
+
+.logo:hover::after {
+    width: 100%;
+    transform: scaleX(1.1);
+    color: rgb(255, 119, 0);
+}
+.hiring-btn {
+    background-image: linear-gradient(to right, rgb(255, 221, 0), rgb(249, 38, 94));
+    border-radius: 50px;
+    border: none;
+    font-size: 12px;
+    height: 30px;
+    padding: 0 15px;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease-in;
+}
+
+.hiring-btn:hover{
+    background-image: linear-gradient(to left, rgb(255, 221, 0), rgb(249, 38, 94));
+    transform: scaleX(1.1);
+}
+
+.center-menu ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+.center-menu a {
+    position: relative;
+    display: inline block;
+    text-decoration: none;
+    color: rgb(64, 64, 64);
+    font-size: 18px;
+    transition: color 0.3s ease, transform 0.3s ease-in;
+}
+
+.center-menu a:hover{
+    color: orange;
+    transform: scaleX(1.1);
+    font-weight: 400;
+}
+
+.center-menu a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: -2px;
+    background-color: orange;
+    transition: width 0.3s ease-in-out;
+}
+
+.center-menu a:hover::after{
+    transform: scaleX(1.1);
+    color: orange;
+    width: 100%;
+}
+
+
+.right-nav {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.sign-in-btn {
+    padding: 15px 20px;
+    border: none;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease-in;
+}
+.sign-in-btn:hover{
+    transform: scaleX(1.1);
+    color: blue;
+    border: 1px solid blue;
+}
+
+.waitlist-btn {
+    padding: 15px 20px;
+    border: none;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease-in;
+}
+
+.waitlist-btn:hover{
+    transform: scaleX(1.1);
+    color: blue;
+    background-color: white;
+    border: 1px solid blue;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .nav-container {
+        flex-direction: column;
+        align-items: center;
+    }    
+    .center-menu ul {
+        gap: 10px;
+        margin-top: 10px;
+        display: flex;
+    }
+
+    .right-nav {
+        margin-top: 10px;
+
+    }
+
+    .main-container {
+        margin: 40px 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .left-nav img {
+        width: 40px;
+        height: 24px;
+    }
+
+    .logo {
+        font-size: 16px;
+    }
+
+    .center-menu ul {
+        font-size: 13px;
+    }
+
+    .right-nav{
+        display: flex;
+    }
+
+    .sign-in-btn,
+    .waitlist-btn {
+        text-align: center;
+    }
+}
+
+
+
+/* main containt section */
+.main-containt{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 150px;
+    
+}
+.containt{
+    width: 400px;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.containt h1{
+    font-size: 50px;
+    font-weight: 800;
+}
+
+.containt p{
+    font-size: 18px;
+
+}
+.input-mail{
+    display: flex;
+    gap: 10px;
+}
+.e-mail{
+    width: 230px;
+    padding: 15px;
+    min-width: 150px;
+}
+.ui-image{
+   display: block;
+   width: 400px;
+   min-width: 300px;
+   height: auto;
+}
+
+.custom-checkbox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 20px;
+    position: relative;
+  }
+  
+  .checkbox-btn {
+    width: 20px;
+    height: 20px;
+    appearance: none;
+    cursor: pointer;
+    border: 1px solid #7e7e7e;
+    background-color: white;
+    border-radius: 50%;
+    outline: none;
+    transition: background 0.3s ease-in;
+    position: relative;
+    margin-right: 10px;
+  }
+  
+  .checkbox-btn:checked {
+    background-color: #5be546;
+  }
+  
+  .checkbox-btn:checked::after {
+    content: "✔";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: white;
+  }
+
+
+  /* footer section */
+  footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    padding: 20px;
+  }
+  
+.footer-section ul{
+    list-style-type: none;
+    display: flex;
+    gap: 50px;
+    font-size: 16px;
+    color: #555;
+}
+
+.footer-section li{
+    transition: color 0.3s ease-in;
+}
+
+.footer-section li:hover{
+    color: orange;
+    cursor: pointer;
+}
+
+  .footer-img {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+  }
+  
+  .footer-img img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  .footer-img p {
+    font-size: 16px;
+    color: #555;
+    margin: 0;
+  }
+  
+  .footer-img b {
+    font-size: 18px;
+    color: #222;
+    margin-top: 5px;
+  }
+  
